@@ -104,6 +104,10 @@ app.get('/home', (req, res) => {
   })
 })
 
+app.get('/getexperthelp', (req, res) => {
+  res.render('getExpertHelp')
+})
+
 app.get('/about', (req, res) => {
   res.render('about')
 })
