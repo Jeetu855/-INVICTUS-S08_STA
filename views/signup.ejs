@@ -12,19 +12,19 @@
 
 <body style="min-height: 100vh;">
     <div class="signup-main">
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default" style="background-color: #ecc9c7;">
             <div class="container">
                 <div class="navbar-header">
-                    <p class="navbar-brand"><a href="/">DAILY JOURNAL</a></p>
+                    <img src="/images/logo2.png" alt="Logo" style="width: 100px;height: auto;">
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <!-- 6 -->
-                    <li id="about"><a href="/about">ABOUT US</a></li>
+                    <li id="about"><a href="/about" style="color:#000;margin-top: 2rem;">ABOUT US</a></li>
                 </ul>
             </div>
         </nav>
 
-        <h1 style="text-align: center;" class="header">Create Your Account</h1>
+        <h1 style="text-align: center; margin-bottom:1rem;" class="header">Create Your Account</h1>
 
         <div id="form">
             <form action="/signup" method="post">
@@ -34,7 +34,8 @@
                 <br>
                 <input type="password" name="password" placeholder="Password" class="form-element">
                 <br>
-                <button type="submit" class="auth-button form-element">Sign up</button>
+                <button type="submit" class="auth-button form-element" style="background-color:#ecc9c7;">Sign
+                    up</button>
                 <br>
                 <p style="margin-left: 1rem;">Already a user? <a style="text-decoration: underline;"
                         href="/login">Login</a></p>

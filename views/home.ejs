@@ -1,20 +1,28 @@
 <%- include("partials/header")-%>
-
-    <h1>Home</h1>
-    <p>
+    <script src="/js/home.js" defer></script>
+    <h1 style="text-align: center;">WomenXP</h1>
+    <p style="text-align: center; font-size: 16px;">
         <%=startingContent%>
     </p>
 
-    <% posts.forEach(function(post){%>
-        <h1>
-            <%=post.title%>
-        </h1>
-        <p>
-            <%=post.content.substring(0,250)+" ..."%>
-                <a href="/posts/<%=post._id%>">Read More</a>
-                <!-- <p>
-                    <%=post._id%>
-                </p> -->
-        </p>
-        <% })%>
-            <%- include("partials/footer")-%>
+    <div class="row" style="margin-bottom:4rem;margin-top: 4rem ;">
+        <% posts.forEach(function(post){%>
+            <div class="col-lg-6">
+                <div class="card" style="background-color: rgb(240,240,240);padding: 2rem;border-radius: 0.7rem;">
+                    <div class=" card-body">
+                        <h3 class="card-title ">
+                            <%=post.title.substring(0,80)+"..."%>
+                        </h3>
+                        <p class="card-text">
+                            <%=post.content.substring(0,110)+" ..."%>
+                        </p>
+                        <a href="/posts/<%=post._id%>" class="btn btn-primary" id="btn">Read More</a>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <% })%>
+    </div>
+
+
+    <%- include("partials/footer")-%>

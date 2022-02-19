@@ -1,3 +1,10 @@
+*{
+  font-family: 'Ubuntu', sans-serif;
+}
+body{
+  background-color: #f3dcd6;
+}
+
 .container-fluid {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -7,10 +14,16 @@
   padding-bottom: 15px;
   border: 0;
   border-radius: 0;
-  margin-bottom: 0;
-  font-size: 12px;
+  margin-top: 0;
+  font-size: 19px;
   letter-spacing: 5px;
+  
 }
+
+.nav-element{
+  color: #000 !important;
+}
+
 .navbar-nav li a:hover {
   color: #1abc9c !important;
 }
@@ -35,10 +48,10 @@
 
 /* root page */
 .home-button{
-    color: #f7d23b !important;
+    color: #000 !important;
     font-size: 12px;
-    background-color: white;
-    border: 2px solid #f7d23b;
+    background-color: #ecc9c7;
+    border: 2px solid #ecc9c7;
     transition-duration: 0.2s;
     padding: 10px 10px 10px 14px;
     letter-spacing: 5px;
@@ -52,8 +65,8 @@
 }
 
 .home-button:hover{
-    background-color: #f7d23b;
-    color: white !important;
+    background-color: #1abc9c;
+    color: #000 !important;
 }
 
 /* signup  */
@@ -63,7 +76,7 @@
 }
 
 .form-element{
-  border: 1px solid #f7d23b;
+  border: 1px solid #ecc9c7;
   margin: 1.5rem;
   border-radius: 3px;
   width: 250px;
@@ -81,13 +94,20 @@
   appearance: none;
   border: 0;
   padding: 10px 15px;
-  color: white;
-  background-color: #f7d23b;
+  color: #000;
+  background-color: #ecc9c7;
   border-radius: 3px;
   width: 250px;
 
 }
 
-.header{
-  margin-top: 5rem;
+.auth-button:hover{
+  background-color: #1abc9c !important;
+  color: #000 !important;
+  text-decoration: none !important;
 }
+
+.header{
+  margin-top: 3rem;
+}
+
