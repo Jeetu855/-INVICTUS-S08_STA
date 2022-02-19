@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Journal</title>
+</head>
+
+<body style="min-height: 100vh;">
+    <div class="signup-main">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <p class="navbar-brand"><a href="/">DAILY JOURNAL</a></p>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- 6 -->
+                    <li id="about"><a href="/about">ABOUT US</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1 style="text-align: center;" class="header">Log in to your Account</h1>
+
+        <div id="form">
+            <form action="/login" method="post">
+                <input type="email" name="username" placeholder="Email Address" class="form-element" autocomplete="off">
+                <br>
+                <input type="password" name="password" placeholder="Password" class="form-element">
+                <br>
+                <button type="submit" class="auth-button form-element">Login</button>
+                <br>
+                <p style="margin-left: 1rem;">Not a user? <a style="text-decoration: underline; "
+                        href="/signup">Signup</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
