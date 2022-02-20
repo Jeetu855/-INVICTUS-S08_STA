@@ -73,7 +73,16 @@ app.post('/signup', (req, res) => {
   })
   newUser.save(err => {
     if (!err) {
-      res.redirect('/home')
+      Post.find({}, (err, posts) => {
+        //*here posts is an array containing post objects
+        if (!err) {
+          // console.log(posts)
+          res.render('home', {
+            startingContent: homeStartingContent,
+            posts: posts
+          })
+        } //we pass an array of post objects in which we then apply for each
+      })
     }
   })
 })
@@ -86,7 +95,16 @@ app.post('/login', (req, res) => {
     if (!err && foundUser) {
       console.log(foundUser)
       if (foundUser.password === password) {
-        res.redirect('/home')
+        Post.find({}, (err, posts) => {
+          //*here posts is an array containing post objects
+          if (!err) {
+            // console.log(posts)
+            res.render('home', {
+              startingContent: homeStartingContent,
+              posts: posts
+            })
+          } //we pass an array of post objects in which we then apply for each
+        })
       } else {
         res.redirect('/login')
       }
@@ -94,15 +112,15 @@ app.post('/login', (req, res) => {
   })
 })
 
-app.get('/home', (req, res) => {
-  Post.find({}, (err, posts) => {
-    //*here posts is an array containing post objects
-    if (!err) {
-      // console.log(posts)
-      res.render('home', { startingContent: homeStartingContent, posts: posts })
-    } //we pass an array of post objects in which we then apply for each
-  })
-})
+// app.get('/home', (req, res) => {
+//   Post.find({}, (err, posts) => {
+//     //*here posts is an array containing post objects
+//     if (!err) {
+//       // console.log(posts)
+//       res.render('home', { startingContent: homeStartingContent, posts: posts })
+//     } //we pass an array of post objects in which we then apply for each
+//   })
+// })
 
 app.get('/getexperthelp', (req, res) => {
   res.render('getExpertHelp')
